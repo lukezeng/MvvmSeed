@@ -43,3 +43,31 @@
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
     </li>
 </ol>
+
+@section javascripts {
+    <script type="text/javascript">
+        $.ajax({
+            url: 'api/ExampleApi/',
+            type: 'Get'
+        }).success(function(result) {
+            console.log(result);
+        });
+
+        $.ajax({
+            url: 'api/ExampleApi/'+ '5',
+            type: 'Get'
+        }).success(function (result) {
+            console.log(result);
+        });
+
+        $.ajax({
+            url: 'api/ExampleApi/',
+            type: 'Post',
+            data: {
+                abc: 'asdasda'
+            }
+        }).success(function (result) {
+            console.log(result);
+        });
+    </script>
+}
